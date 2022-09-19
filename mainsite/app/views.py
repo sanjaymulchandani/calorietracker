@@ -20,7 +20,7 @@ def dashboard(request):
 
 def delete_items(request, pk):
     consumed_food = Consume.objects.get(id= pk)
-    if request.method == 'POST':
+    if request.method =='POST':
         consumed_food.delete()
         return redirect('dashboard')
     else:
